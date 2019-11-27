@@ -1,0 +1,33 @@
+{
+    "title": "Resume",
+    "name": "startbootstrap-resume",
+    "version": "5.0.8",
+    "scripts": {
+        
+    },
+    "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ezhang7423/personal-website.git"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "5.10.2",
+        "bootstrap": "4.3.1",
+        "jquery": "3.4.1",
+        "jquery.easing": "^1.4.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.26.7",
+        "del": "5.1.0",
+        "merge-stream": "2.0.0"
+    }
+}
