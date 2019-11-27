@@ -11,3 +11,4 @@ Built with
 * link up dev icons
 * fill in content(duh)
 * add small descrip at bottom explaing reasoning behind domain name
+* add favicon
