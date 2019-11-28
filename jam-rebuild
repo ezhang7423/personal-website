@@ -1,0 +1,7 @@
+#!/bin/bash
+STATUS="$(git pull)"
+if [ "$STATUS" == "Already up to date." ]; then
+        echo "$STATUS"
+else
+        echo "Finished building"
+fi
