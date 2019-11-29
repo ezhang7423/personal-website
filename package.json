@@ -3,7 +3,7 @@
     "name": "startbootstrap-resume",
     "version": "5.0.8",
     "scripts": {
-        
+        "buildFA": "./node_modules/.bin/rollup -c"
     },
     "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
     "keywords": [
@@ -20,10 +20,12 @@
         "url": "https://github.com/ezhang7423/personal-website.git"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.10.2",
+        "@fortawesome/fontawesome": "^1.1.4",
         "bootstrap": "4.3.1",
         "jquery": "3.4.1",
-        "jquery.easing": "^1.4.1"
+        "jquery.easing": "^1.4.1",
+        "rollup": "^0.56.3",
+        "rollup-plugin-node-resolve": "^3.0.3"
     },
     "devDependencies": {
         "browser-sync": "2.26.7",
