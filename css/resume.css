@@ -186,3 +186,88 @@ a:hover, a:focus, a:active {
 .copyright {
   background-color: #1a252f;
 }
+
+
+
+
+
+
+
+
+/* projects css */
+.itm{
+  transition: filter .5s;
+}
+.itm:hover{
+  filter: brightness(50%);
+}
+.portfolio {
+  margin-bottom: -30px;
+}
+
+.portfolio .portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  margin-bottom: 30px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(26, 188, 156, 0.9);
+}
+
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.portfolio-modal .portfolio-modal-title {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 992px) {
+  .portfolio-modal .portfolio-modal-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  .modal-xl{
+    max-width: 800px;
+  }
+  .portfolio-modal .close {
+    right: 1.5rem;
+  top: 1rem;
+  }
+}
+
+.portfolio-modal .close {
+  position: absolute;
+  z-index: 1;
+  right: .5rem;
+  top: .1rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #1abc9c;
+  opacity: 1;
+}
+
+.img-fluid.rounded.mb-5{
+  margin-bottom: 1rem !important;
+}
+
+
+.container{
+  margin-left: 0;
+  padding-left: 0;
+}
