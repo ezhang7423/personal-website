@@ -182,3 +182,7 @@ a {
 a:hover, a:focus, a:active {
   color: #5baf62;
 }
+
+.copyright {
+  background-color: #1a252f;
+}
