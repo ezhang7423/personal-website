@@ -42,6 +42,15 @@ p.lead {
   font-weight: 400;
 }
 
+.no-styling{
+  text-decoration: none;
+  color: #868e96;
+}
+
+.no-styling:focus{
+  text-decoration: none;
+  color: #868e96;
+}
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
@@ -75,6 +84,10 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
+  color: #6ed476;
+}
+
+.dev-icons .list-inline-item svg:hover {
   color: #6ed476;
 }
 
