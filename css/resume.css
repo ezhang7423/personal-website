@@ -167,6 +167,29 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
+.why-domain{
+  margin:0 20px 20px 0; 
+  text-align: right; 
+  font-size: .5rem;
+}
+
+.why-domain div{
+  font-size: .3rem;
+}
+
+@media (min-width: 768px){
+.why-domain{
+  margin:0 20px 20px 0; 
+  text-align: right; 
+  font-size: .8rem;
+}
+
+.why-domain div{
+  font-size: .6rem;
+}
+}
+
+
 .bg-primary {
   background-color: #5baf62!important;
 }

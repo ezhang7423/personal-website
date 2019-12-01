@@ -20,7 +20,17 @@
   <script src="js/bundle.js"></script>
   <!-- Custom styles for this template -->
   <link href="css/resume.css" rel="stylesheet">
-
+  <script>
+    function playSound(el, soundfile) {
+      if (el.mp3) {
+        if (el.mp3.paused) el.mp3.play();
+        else el.mp3.pause();
+      } else {
+        el.mp3 = new Audio(soundfile);
+        el.mp3.play();
+      }
+    }
+  </script>
 </head>
 
 <body id="page-top">
@@ -385,7 +395,10 @@
         </p>
         <p class="mb-0">I'm kind of a workaholic, but outside of coding I enjoy going to triathlon practice, data
           science club(which is vaguely related to web dev but not really),
-          and hunting dinosaurs(lol jk)</p>
+          and hunting dinosaurs(lol jk)<div class="why-domain" style="text-align: left;">
+            <div onclick="playSound(this, 'img/ilum.mp3')">or am i?</div>
+          </div>
+        </p>
       </div>
     </section>
 
@@ -757,7 +770,12 @@
     </div>
 
 
-
+    <div class="why-domain">*why the domain name
+      eddie.win?<div>
+        my mom used to call me
+        'ai da wan', a <br> bastardization of my actual name edwin. <br> my friends thought this was
+        hilarious and <br>so they started calling me that too: <br>the domain name is just a massive joke.</div>
+    </div>
 
 
     <section class="copyright py-4 text-center text-white">
@@ -769,7 +787,8 @@
             <i class="fa fa-chevron-up"></i>
           </a>
         </div>
-        <small>Made by Eddie Zhang 2019</small>
+        <small>Made by ya boi Eddie Zhang 2019<div style="font-size:.5rem">Feel free to take any of the code</div>
+        </small>
       </div>
 
     </section>
