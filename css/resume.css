@@ -24,8 +24,13 @@ body.loaded {
 @media (min-width: 992px) {
   body.loaded {
     padding-top: 0;
-    padding-left: 17rem;
   }
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
