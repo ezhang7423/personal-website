@@ -57,12 +57,12 @@ function showTab(n) {
 
 
 function openMain(){
-  console.log('yes')
   const body = document.querySelector("#page-top")
   const mq = window.matchMedia( "(min-width: 992px)" );
   if (mq.matches){
         body.style["padding-left"] = "17rem";
   }
+  else body.style["padding-top"] = "54px"
   showTab(0)
 }
 //make canvas work
@@ -70,12 +70,12 @@ var c = document.getElementsByClassName("intro")[0];
 var ctx = c.getContext("2d");
 var cH;
 var cW;
-var bgColor = "#FF6138";
+var bgColor = "#000";
 var animations = [];
 var circles = [];
 
 var colorPicker = (function() {
-  var colors = ["#FF6138", "#FFBE53", "#2980B9", "#282741"];
+  var colors = ["#000", "#282741"];
   var index = 0;
   function next() {
     index = index++ < colors.length-1 ? index : 0;
@@ -105,7 +105,17 @@ function addClickListeners() {
   document.addEventListener("touchstart", handleEvent);
   document.addEventListener("mousedown", handleEvent);
 };
-
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+function getRndColor() {
+   var r = getRandomInt(244, 255),
+        g = getRandomInt(122, 255),
+        b = getRandomInt(122, 255)
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
 function handleEvent(e) {
     if (e.touches) { 
       e.preventDefault();
@@ -126,7 +136,7 @@ function handleEvent(e) {
     var fillAnimation = anime({
       targets: pageFill,
       r: targetR,
-      duration:  Math.max(targetR / 2 , minCoverDuration ),
+      duration:  Math.max(targetR / 2 , minCoverDuration )+1500,
       easing: "easeOutQuart",
       complete: function(){
         bgColor = pageFill.fill;
@@ -159,8 +169,8 @@ function handleEvent(e) {
       var particle = new Circle({
         x: e.pageX,
         y: e.pageY,
-        fill: currentColor,
-        r: anime.random(24, 48)
+        fill: getRndColor(),
+        r: anime.random(12, 24)
       })
       particles.push(particle);
     }
@@ -174,11 +184,12 @@ function handleEvent(e) {
       },
       r: 0,
       easing: "easeOutExpo",
-      duration: anime.random(1000,1300),
+      duration: anime.random(2500,3800),
       complete: removeAnimation
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
 }
+
 
 function extend(a, b){
   for(var key in b) {
@@ -233,23 +244,15 @@ var resizeCanvas = function() {
 
 (function init() {
   resizeCanvas();
-  if (window.CP) {
-    // CodePen's loop detection was causin' problems
-    // and I have no idea why, so...
-    window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000; 
-  }
   window.addEventListener("resize", resizeCanvas);
   addClickListeners();
-  if (!!window.location.pathname.match(/fullcpgrid/)) {
-    startFauxClicking();
-  }
   handleInactiveUser();
 })();
 
 function handleInactiveUser() {
   var inactive = setTimeout(function(){
     fauxClick(cW/2, cH/2);
-  }, 2000);
+  }, 6000);
   
   function clearInactiveTimeout() {
     clearTimeout(inactive);
@@ -259,13 +262,6 @@ function handleInactiveUser() {
   
   document.addEventListener("mousedown", clearInactiveTimeout);
   document.addEventListener("touchstart", clearInactiveTimeout);
-}
-
-function startFauxClicking() {
-  setTimeout(function(){
-    fauxClick(anime.random( cW * .2, cW * .8), anime.random(cH * .2, cH * .8));
-    startFauxClicking();
-  }, anime.random(200, 900));
 }
 
 function fauxClick(x, y) {
