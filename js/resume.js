@@ -25,5 +25,33 @@
     target: '#sideNav'
   });
 
+  $(window).on('load', function() {
+    $("body").addClass('loaded');
+  });
+
 })(jQuery); // End of use strict
+
+
+// make audio work
+  
+    function playSound(el, soundfile) {
+      if (el.mp3) {
+        if (el.mp3.paused) el.mp3.play();
+        else el.mp3.pause();
+      } else {
+        el.mp3 = new Audio(soundfile);
+        el.mp3.play();
+      }
+    }
+
+//show diff tabs
+var currentTab = 1;
+showTab(currentTab)
+
+function showTab(n) {
+  let tabs = document.getElementsByClassName("tab")
+  for (i = 0; i < tabs.length; i++){
+    (i !== n) ? tabs[i].style.display = "none" : tabs[i].style.display= "block"
+  }
+}
 
