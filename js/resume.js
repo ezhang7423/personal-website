@@ -45,7 +45,7 @@
     }
 
 //show diff tabs
-var currentTab = 1;
+var currentTab = 0;
 showTab(currentTab)
 
 function showTab(n) {

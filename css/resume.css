@@ -21,7 +21,12 @@ body.loaded {
   body.loaded {
     padding-top: 0;
   }
+  .tab.t1{
+    padding-left: 17rem;
+  }
 }
+
+
 
 canvas {
   display: block;
