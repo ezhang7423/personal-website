@@ -45,7 +45,7 @@
     }
 
 //show diff tabs
-var currentTab = 0;
+var currentTab = 1;
 showTab(currentTab)
 
 function showTab(n) {
@@ -57,12 +57,12 @@ function showTab(n) {
 
 
 function openMain(){
-  const body = document.querySelector("#page-top")
-  const mq = window.matchMedia( "(min-width: 992px)" );
-  if (mq.matches){
-        body.style["padding-left"] = "17rem";
-  }
-  else body.style["padding-top"] = "54px"
+  // const body = document.querySelector("#page-top")
+  // const mq = window.matchMedia( "(min-width: 992px)" );
+  // if (mq.matches){
+  //       body.style["padding-left"] = "17rem";
+  // }
+  // else body.style["padding-top"] = "54px"
   showTab(0)
 }
 //make canvas work
