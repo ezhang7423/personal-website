@@ -33,7 +33,7 @@
 
 
 // make audio work
-  
+
     function playSound(el, soundfile) {
       if (el.mp3) {
         if (el.mp3.paused) el.mp3.play();
@@ -45,13 +45,13 @@
     }
 
 //show diff tabs
-var currentTab = 0;
+var currentTab = 1;
 showTab(currentTab)
 
 function showTab(n) {
   let tabs = document.getElementsByClassName("tab")
   for (i = 0; i < tabs.length; i++){
-    (i !== n) ? tabs[i].style.display = "none" : tabs[i].style.display= "block"
+    (i !== n) ? tabs[i].style.opacity = "0" : tabs[i].style.opacity = "1"
   }
 }
 
@@ -75,7 +75,7 @@ var animations = [];
 var circles = [];
 
 var colorPicker = (function() {
-  var colors = ["#000", "#282741"];
+  var colors = ["#000", "#fff"];
   var index = 0;
   function next() {
     index = index++ < colors.length-1 ? index : 0;
@@ -111,10 +111,26 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 function getRndColor() {
-   var r = getRandomInt(244, 255),
-        g = getRandomInt(122, 255),
-        b = getRandomInt(122, 255)
+   which = getRandomInt(1, 4)
+  //  if (which == 1){
+  //   var r = getRandomInt(0, 122),
+  //   g = getRandomInt(200, 255),
+  //   b = getRandomInt(0, 122)
+  //   return 'rgb(' + r + ',' + g + ',' + b + ')';
+  //  }
+  //  else if (which ==2){
+  //   var r = getRandomInt(0, 122),
+  //   g = getRandomInt(0, 122),
+  //   b = getRandomInt(200, 255)
+  //   return 'rgb(' + r + ',' + g + ',' + b + ')';
+  //  }
+  //  else {
+    var r = getRandomInt(200, 255),
+    g = getRandomInt(0, 122),
+    b = getRandomInt(0, 122)
     return 'rgb(' + r + ',' + g + ',' + b + ')';
+  //  }
+    
 }
 function handleEvent(e) {
     if (e.touches) { 
@@ -160,12 +176,12 @@ function handleEvent(e) {
       r: rippleSize,
       opacity: 0,
       easing: "easeOutExpo",
-      duration: 900,
+      duration: 0,
       complete: removeAnimation
     });
     
     var particles = [];
-    for (var i=0; i<32; i++) {
+    for (var i=0; i<36; i++) {
       var particle = new Circle({
         x: e.pageX,
         y: e.pageY,
@@ -188,6 +204,9 @@ function handleEvent(e) {
       complete: removeAnimation
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
+    setTimeout(function() {c.classList.toggle('finished'); showTab(0);     window.removeEventListener('scroll', noScroll);}, 1500)
+
+    console.log(c.classList)
 }
 
 
@@ -252,7 +271,7 @@ var resizeCanvas = function() {
 function handleInactiveUser() {
   var inactive = setTimeout(function(){
     fauxClick(cW/2, cH/2);
-  }, 6000);
+  }, 2000);
   
   function clearInactiveTimeout() {
     clearTimeout(inactive);

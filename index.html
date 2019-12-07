@@ -2,7 +2,12 @@
 <html lang="en">
 
 <head>
-
+  <script>
+    function noScroll() {
+  window.scrollTo(0, 0)
+}
+    window.addEventListener('scroll', noScroll);
+    </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Eddie Zhang's front end developer resume ">
@@ -24,6 +29,7 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.css" rel="stylesheet">
   <script src="js/anime.min.js"></script>
+
 </head>
 
 
@@ -451,7 +457,6 @@
 
 <div class='tab t2'>
     <canvas class="intro"></canvas>
-    <button onclick="openMain()">Begin</button>
   </div>
         <!-- Portfolio Modals -->
 <div class='portfolios'>
