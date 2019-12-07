@@ -319,7 +319,7 @@ var animate = anime({
 });
 
 var resizeCanvas = function() {
-  cW = window.innerWidth;
+  cW = window.innerWidth * .985;
   cH = window.innerHeight;
   c.width = cW * devicePixelRatio;
   c.height = cH * devicePixelRatio;
