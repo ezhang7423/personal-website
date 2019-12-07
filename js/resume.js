@@ -319,8 +319,8 @@ var animate = anime({
 });
 
 var resizeCanvas = function() {
-  cW = window.innerWidth * .985;
-  cH = window.innerHeight;
+  cW = window.innerWidth;
+  cH = window.innerHeight * .985;
   c.width = cW * devicePixelRatio;
   c.height = cH * devicePixelRatio;
   ctx.scale(devicePixelRatio, devicePixelRatio);
