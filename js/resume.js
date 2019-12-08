@@ -133,6 +133,8 @@ function getRndColor() {
     
 }
 function handleEvent(e) {
+  document.removeEventListener("mousedown", handleEvent);
+  document.removeEventListener("touchstart", handleEvent);
     if (e.touches) { 
       e.preventDefault();
       e = e.touches[0];
@@ -319,8 +321,8 @@ var animate = anime({
 });
 
 var resizeCanvas = function() {
-  cW = $(window).width();
-  cH = $(window).height() * .985;
+  cW = window.innerWidth;
+  cH = window.innerHeight;
   c.width = cW * devicePixelRatio;
   c.height = cH * devicePixelRatio;
   ctx.scale(devicePixelRatio, devicePixelRatio);
