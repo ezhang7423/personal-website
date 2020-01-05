@@ -222,7 +222,6 @@ function handleEvent(e) {
       window.removeEventListener("scroll", noScroll);
     }, 1500);
   } else {
-    console.log("real");
     var pageFill = new Circle({
       x: e.pageX,
       y: e.pageY,
@@ -290,7 +289,6 @@ function handleEvent(e) {
       window.removeEventListener("scroll", noScroll);
     }, 500);
   }
-  console.log(c.classList);
 }
 
 function extend(a, b) {
