@@ -75,6 +75,26 @@ p.lead {
   font-weight: 400;
 }
 
+p.project-text {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  p.project-text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  p.project-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  p.project-text {
+    font-size: 14px;
+  }
+}
+
 .no-styling {
   text-decoration: none;
   color: #868e96;
