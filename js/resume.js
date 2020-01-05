@@ -52,19 +52,43 @@ function playSound(el, soundfile) {
 
 //show diff tabs
 var currentTab = 1;
-showTab(currentTab);
+initTab(currentTab);
 
-function showTab(n) {
+function initTab(n) {
   let tabs = document.getElementsByClassName("tab");
   for (i = 0; i < tabs.length; i++) {
     if (i !== n) {
       tabs[i].style.opacity = "0";
-      tabs[i].style.display = "none";
     } else {
       tabs[i].style.opacity = "1";
-      tabs[i].style.display = "block";
     }
   }
+}
+
+function showTab(n) {
+  let tabs = document.getElementsByClassName("tab");
+  for (let i = 0; i < tabs.length; i++) {
+    if (i !== n) {
+      tabs[i].style.opacity = "0";
+      setTimeout(function() {
+        disappear(tabs[i]);
+      }, 700);
+    } else {
+      tabs[i].style.opacity = "1";
+      setTimeout(function() {
+        appear(tabs[i]);
+      }, 700);
+    }
+  }
+}
+function appear(element) {
+  console.log(element);
+  element.style.display = "block";
+}
+
+function disappear(element) {
+  console.log(element);
+  element.style.display = "none";
 }
 
 function openMain() {
