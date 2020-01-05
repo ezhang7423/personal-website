@@ -1,22 +1,22 @@
-
 body {
   opacity: 0;
 }
 
-.tab.t1{
+.tab.t1 {
   opacity: 0;
 }
 
 body.loaded {
   opacity: 1;
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   color: #868e96;
 }
 
-.tab.t1{
-  transition: opacity 1s cubic-bezier(0,-0.05,.53,1.09);
+.tab.t1 {
+  transition: opacity 1s cubic-bezier(0, -0.05, 0.53, 1.09);
 }
-
 
 canvas {
   position: absolute;
@@ -30,22 +30,16 @@ canvas {
   body.loaded {
     padding-top: 0;
   }
-  canvas{
+  canvas {
     left: -16.8px;
   }
-  .tab.t1{
+  .tab.t1 {
     padding-left: 17rem;
   }
 }
 
-
-
-
-
-canvas (max-width: 992px){
-
-}
-.intro.finished, .tab.t2.finished {
+.intro.finished,
+.tab.t2.finished {
   opacity: 0;
 }
 
@@ -55,7 +49,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   text-transform: uppercase;
   color: #343a40;
@@ -79,19 +75,21 @@ p.lead {
   font-weight: 400;
 }
 
-.no-styling{
+.no-styling {
   text-decoration: none;
   color: #868e96;
 }
 
-.no-styling:focus{
+.no-styling:focus {
   text-decoration: none;
   color: #868e96;
 }
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
 }
 
@@ -114,7 +112,7 @@ p.lead {
 
 .sociale-icons a:hover {
   background-color: #6ed476;
-} 
+}
 
 .dev-icons {
   font-size: 3rem;
@@ -204,31 +202,30 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
-.why-domain{
-  margin:0 20px 20px 0; 
-  text-align: right; 
-  font-size: .5rem;
+.why-domain {
+  margin: 0 20px 20px 0;
+  text-align: right;
+  font-size: 0.5rem;
 }
 
-.why-domain div{
-  font-size: .3rem;
+.why-domain div {
+  font-size: 0.3rem;
 }
 
-@media (min-width: 768px){
-.why-domain{
-  margin:0 20px 20px 0; 
-  text-align: right; 
-  font-size: .8rem;
-}
+@media (min-width: 768px) {
+  .why-domain {
+    margin: 0 20px 20px 0;
+    text-align: right;
+    font-size: 0.8rem;
+  }
 
-.why-domain div{
-  font-size: .6rem;
+  .why-domain div {
+    font-size: 0.6rem;
+  }
 }
-}
-
 
 .bg-primary {
-  background-color: #5baf62!important;
+  background-color: #5baf62 !important;
 }
 
 .text-primary {
@@ -239,7 +236,9 @@ a {
   color: #5baf62;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #5baf62;
 }
 
@@ -247,17 +246,13 @@ a:hover, a:focus, a:active {
   background-color: #1a252f;
 }
 
-
-
-
-
 /* projects css */
 
-.itm{
-  transition: filter .5s;
+.itm {
+  transition: filter 0.5s;
   padding-bottom: 30px;
 }
-.itm:hover{
+.itm:hover {
   filter: brightness(50%);
 }
 .portfolio {
@@ -287,29 +282,22 @@ a:hover, a:focus, a:active {
   opacity: 1;
 }
 
-.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+.portfolio
+  .portfolio-item
+  .portfolio-item-caption
+  .portfolio-item-caption-content {
   font-size: 1.5rem;
 }
 
-
-
-.onlymobile{
+.onlymobile {
   display: none;
 }
 
-
-@media (max-width: 500px){
-  .onlymobile{
+@media (max-width: 500px) {
+  .onlymobile {
     display: block;
   }
 }
-
-
-
-
-
-
-
 
 .portfolio-modal .portfolio-modal-title {
   font-size: 2.25rem;
@@ -319,8 +307,8 @@ a:hover, a:focus, a:active {
 .portfolio-modal .close {
   position: absolute;
   z-index: 1;
-  right: .5rem;
-  top: .1rem;
+  right: 0.5rem;
+  top: 0.1rem;
   font-size: 3rem;
   line-height: 3rem;
   color: #4e9654;
@@ -333,22 +321,20 @@ a:hover, a:focus, a:active {
   }
   .portfolio-modal .close {
     right: 1.5rem;
-  top: 1rem;
+    top: 1rem;
   }
-  .img-fluid.rounded{
+  .img-fluid.rounded {
     width: 80%;
-    
-  } 
+  }
 }
-.img-fluid.rounded{
-  transition: filter .5s;
-  margin-bottom: .6rem !important;
+.img-fluid.rounded {
+  transition: filter 0.5s;
+  margin-bottom: 0.6rem !important;
 }
 
-.img-fluid.rounded:hover{
+.img-fluid.rounded:hover {
   filter: brightness(50%);
 }
-
 
 .close {
   float: right;
@@ -357,7 +343,7 @@ a:hover, a:focus, a:active {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .close:hover {
@@ -365,8 +351,9 @@ a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
-.close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
-  opacity: .75;
+.close:not(:disabled):not(.disabled):hover,
+.close:not(:disabled):not(.disabled):focus {
+  opacity: 0.75;
 }
 
 button.close {
@@ -377,7 +364,6 @@ button.close {
   -moz-appearance: none;
   appearance: none;
 }
-
 
 .modal-open {
   overflow: hidden;
@@ -535,11 +521,11 @@ button.close {
 }
 
 .modal-footer > :not(:first-child) {
-  margin-left: .25rem;
+  margin-left: 0.25rem;
 }
 
 .modal-footer > :not(:last-child) {
-  margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 
 .modal-scrollbar-measure {
