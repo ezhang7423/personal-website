@@ -1,11 +1,11 @@
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
       location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
+      this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       var target = $(this.hash);
@@ -24,7 +24,7 @@
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $(".js-scroll-trigger").click(function() {
+  $(".js-scroll-trigger").click(function () {
     $(".navbar-collapse").collapse("hide");
   });
 
@@ -33,7 +33,7 @@
     target: "#sideNav"
   });
 
-  $(window).on("load", function() {
+  $(window).on("load", function () {
     $("body").addClass("loaded");
   });
 })(jQuery); // End of use strict
@@ -51,7 +51,8 @@ function playSound(el, soundfile) {
 }
 
 //show diff tabs
-var currentTab = 1;
+console.log('hi')
+var currentTab = 0;
 initTab(currentTab);
 
 function initTab(n) {
@@ -70,12 +71,12 @@ function showTab(n) {
   for (let i = 0; i < tabs.length; i++) {
     if (i !== n) {
       tabs[i].style.opacity = "0";
-      setTimeout(function() {
+      setTimeout(function () {
         disappear(tabs[i]);
       }, 700);
     } else {
       tabs[i].style.opacity = "1";
-      setTimeout(function() {
+      setTimeout(function () {
         appear(tabs[i]);
       }, 700);
     }
@@ -109,7 +110,7 @@ var bgColor = "#000";
 var animations = [];
 var circles = [];
 
-var colorPicker = (function() {
+var colorPicker = (function () {
   var colors = ["#000", "#fff"];
   var index = 0;
   function next() {
@@ -190,7 +191,7 @@ function handleEvent(e) {
       r: targetR,
       duration: Math.max(targetR / 2, minCoverDuration) + 1500,
       easing: "easeOutQuart",
-      complete: function() {
+      complete: function () {
         bgColor = pageFill.fill;
         removeAnimation(fillAnimation);
       }
@@ -228,10 +229,10 @@ function handleEvent(e) {
     }
     var particlesAnimation = anime({
       targets: particles,
-      x: function(particle) {
+      x: function (particle) {
         return particle.x + anime.random(rippleSize, -rippleSize);
       },
-      y: function(particle) {
+      y: function (particle) {
         return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
       },
       r: 0,
@@ -240,7 +241,7 @@ function handleEvent(e) {
       complete: removeAnimation
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
-    setTimeout(function() {
+    setTimeout(function () {
       c.classList.toggle("finished");
       showTab(0);
       window.removeEventListener("scroll", noScroll);
@@ -257,7 +258,7 @@ function handleEvent(e) {
       r: targetR,
       duration: Math.max(targetR / 2, minCoverDuration),
       easing: "easeOutQuart",
-      complete: function() {
+      complete: function () {
         bgColor = pageFill.fill;
         removeAnimation(fillAnimation);
       }
@@ -295,10 +296,10 @@ function handleEvent(e) {
     }
     var particlesAnimation = anime({
       targets: particles,
-      x: function(particle) {
+      x: function (particle) {
         return particle.x + anime.random(rippleSize, -rippleSize);
       },
-      y: function(particle) {
+      y: function (particle) {
         return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
       },
       r: 0,
@@ -307,7 +308,7 @@ function handleEvent(e) {
       complete: removeAnimation
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
-    setTimeout(function() {
+    setTimeout(function () {
       c.classList.toggle("finished");
       showTab(0);
       window.removeEventListener("scroll", noScroll);
@@ -324,11 +325,11 @@ function extend(a, b) {
   return a;
 }
 
-var Circle = function(opts) {
+var Circle = function (opts) {
   extend(this, opts);
 };
 
-Circle.prototype.draw = function() {
+Circle.prototype.draw = function () {
   ctx.globalAlpha = this.opacity || 1;
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
@@ -347,18 +348,18 @@ Circle.prototype.draw = function() {
 
 var animate = anime({
   duration: Infinity,
-  update: function() {
+  update: function () {
     ctx.fillStyle = bgColor;
     ctx.fillRect(0, 0, cW, cH);
-    animations.forEach(function(anim) {
-      anim.animatables.forEach(function(animatable) {
+    animations.forEach(function (anim) {
+      anim.animatables.forEach(function (animatable) {
         animatable.target.draw();
       });
     });
   }
 });
 
-var resizeCanvas = function() {
+var resizeCanvas = function () {
   cW = window.innerWidth;
   cH = window.innerHeight;
   c.width = cW * devicePixelRatio;
@@ -374,7 +375,7 @@ var resizeCanvas = function() {
 })();
 
 function handleInactiveUser() {
-  var inactive = setTimeout(function() {
+  var inactive = setTimeout(function () {
     fauxClick(cW / 2, cH / 2);
   }, 2000);
 
