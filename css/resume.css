@@ -27,6 +27,10 @@ canvas {
   transition: all 1s;
 }
 @media (min-width: 992px) {
+  .onlymobile {
+    display: none;
+  }
+  
   body.loaded {
     padding-top: 0;
   }
