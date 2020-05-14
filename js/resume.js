@@ -51,7 +51,7 @@ function playSound(el, soundfile) {
 }
 
 //show diff tabs
-var currentTab = 0;
+var currentTab = 1;
 initTab(currentTab);
 
 function initTab(n) {
