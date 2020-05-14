@@ -5,7 +5,7 @@
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
       location.pathname.replace(/^\//, "") ==
-      this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       var target = $(this.hash);
@@ -13,7 +13,7 @@
       if (target.length) {
         $("html, body").animate(
           {
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top,
           },
           1000,
           "easeInOutExpo"
@@ -30,7 +30,7 @@
 
   // Activate scrollspy to add active class to navbar items on scroll
   $("body").scrollspy({
-    target: "#sideNav"
+    target: "#sideNav",
   });
 
   $(window).on("load", function () {
@@ -51,7 +51,7 @@ function playSound(el, soundfile) {
 }
 
 //show diff tabs
-var currentTab = 1;
+var currentTab = 0;
 initTab(currentTab);
 
 function initTab(n) {
@@ -121,7 +121,7 @@ var colorPicker = (function () {
   }
   return {
     next: next,
-    current: current
+    current: current,
   };
 })();
 
@@ -183,7 +183,7 @@ function handleEvent(e) {
       x: e.pageX,
       y: e.pageY,
       r: 0,
-      fill: nextColor
+      fill: nextColor,
     });
     var fillAnimation = anime({
       targets: pageFill,
@@ -193,7 +193,7 @@ function handleEvent(e) {
       complete: function () {
         bgColor = pageFill.fill;
         removeAnimation(fillAnimation);
-      }
+      },
     });
 
     var ripple = new Circle({
@@ -203,9 +203,9 @@ function handleEvent(e) {
       fill: currentColor,
       stroke: {
         width: 3,
-        color: currentColor
+        color: currentColor,
       },
-      opacity: 1
+      opacity: 1,
     });
     var rippleAnimation = anime({
       targets: ripple,
@@ -213,7 +213,7 @@ function handleEvent(e) {
       opacity: 0,
       easing: "easeOutExpo",
       duration: 0,
-      complete: removeAnimation
+      complete: removeAnimation,
     });
 
     var particles = [];
@@ -222,7 +222,7 @@ function handleEvent(e) {
         x: e.pageX,
         y: e.pageY,
         fill: getRndColor(),
-        r: anime.random(12, 24)
+        r: anime.random(12, 24),
       });
       particles.push(particle);
     }
@@ -237,7 +237,7 @@ function handleEvent(e) {
       r: 0,
       easing: "easeOutExpo",
       duration: anime.random(2500, 3800),
-      complete: removeAnimation
+      complete: removeAnimation,
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
     setTimeout(function () {
@@ -250,7 +250,7 @@ function handleEvent(e) {
       x: e.pageX,
       y: e.pageY,
       r: 0,
-      fill: nextColor
+      fill: nextColor,
     });
     var fillAnimation = anime({
       targets: pageFill,
@@ -260,7 +260,7 @@ function handleEvent(e) {
       complete: function () {
         bgColor = pageFill.fill;
         removeAnimation(fillAnimation);
-      }
+      },
     });
 
     var ripple = new Circle({
@@ -270,9 +270,9 @@ function handleEvent(e) {
       fill: currentColor,
       stroke: {
         width: 3,
-        color: currentColor
+        color: currentColor,
       },
-      opacity: 1
+      opacity: 1,
     });
     var rippleAnimation = anime({
       targets: ripple,
@@ -280,7 +280,7 @@ function handleEvent(e) {
       opacity: 0,
       easing: "easeOutExpo",
       duration: 0,
-      complete: removeAnimation
+      complete: removeAnimation,
     });
 
     var particles = [];
@@ -289,7 +289,7 @@ function handleEvent(e) {
         x: e.pageX,
         y: e.pageY,
         fill: getRndColor(),
-        r: anime.random(12, 24)
+        r: anime.random(12, 24),
       });
       particles.push(particle);
     }
@@ -304,7 +304,7 @@ function handleEvent(e) {
       r: 0,
       easing: "easeOutExpo",
       duration: anime.random(1500, 2000),
-      complete: removeAnimation
+      complete: removeAnimation,
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
     setTimeout(function () {
@@ -355,7 +355,7 @@ var animate = anime({
         animatable.target.draw();
       });
     });
-  }
+  },
 });
 
 var resizeCanvas = function () {
