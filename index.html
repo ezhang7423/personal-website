@@ -3,15 +3,18 @@
 
 <head>
   <script>
-    function noScroll() {
-      window.scrollTo(0, 0)
+    let debug = true;
+    if (!debug) {
+      function noScroll() {
+        window.scrollTo(0, 0)
+      }
+      window.addEventListener('scroll', noScroll);
     }
-    window.addEventListener('scroll', noScroll);
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1,
       shrink-to-fit=no">
-  <meta name="description" content="Eddie Zhang's front end developer resume">
+  <meta name="description" content="Eddie Zhang's machine learning researcher resume">
   <meta name="author" content="Eddie Zhang">
   <link rel="icon" type="ico" href="img/favicon.ico" />
   <title>Eddie Zhang</title>
@@ -86,10 +89,10 @@
             <span class="text-primary">Zhang</span>
           </h1>
           <div class="subheading mb-5">17110 Bernardo Center Dr. · San Diego,
-            CA 92129 · (608) 571-5609 ·
+            CA 92129 ·
             <a href="mailto:ete@ucsb.edu">ete [at] ucsb.edu</a>
           </div>
-          <p class="lead mb-5">I make websites.</p>
+          <p class="lead mb-5">I build networks.</p>
           <div class="sociale-icons">
             <a target="_blank" href="https://www.linkedin.com/in/eddie-zhang-175401196/">
               <i class="fab fa-linkedin-in"></i>
@@ -116,12 +119,13 @@
               <h3 class="mb-0">University of California Santa Barbara</h3>
               <div class="subheading mb-3">Bachelor of Science</div>
               <div>Computer Science</div>
-              <p>GPA: 4.00</p>
+              <p>GPA: 3.98</p>
               <p>Regents Scholar (top 2.5% of school)<br> College of
                 Engineering Honors Student<br>
-                Relevant coursework: Introduction to C++, Object Oriented C++
-                (Planned Winter 2019), Data Structures and
-                Algorithms (Planned Winter 2019)</p>
+                Relevant coursework: Introduction to Deep Learning, Convex Optimization, Artificial Intelligence,
+                Machine Learning,
+                Data Science Analysis
+              </p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">Expected graduation 6/2022</span>
@@ -170,7 +174,7 @@
 
                 <img class="img-fluid" src="img/real-portfolio/ssoa-min.png" alt="">
               </div>
-              <p class="project-text">Small Scale OA MVP</p>
+              <p class="project-text">AlphaGo Zero Reimplementation</p>
             </div>
 
             <!-- Portfolio Item 3 -->
@@ -465,13 +469,16 @@
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
+              Mobile-First, Responsive Design
+            </li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging</li>
+              Cross Browser Testing &amp; Debugging
+            </li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              The most performant frontend technologies for every component</li>
+              The most performant frontend technologies for every component
+            </li>
             <li>
               <i class="fa-li fa fa-check"></i>
               Democratic and fast-moving team player
@@ -511,7 +518,8 @@
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              First overall out of 6 at Santa Barbara Startup Weekend</li>
+              First overall out of 6 at Santa Barbara Startup Weekend
+            </li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
               First out of 70 in Database Category at SBhacks
@@ -522,13 +530,16 @@
             </li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              Regents Scholar UCSB</li>
+              Regents Scholar UCSB
+            </li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              AP Scholar with Distinction</li>
+              AP Scholar with Distinction
+            </li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              USA Computing Olympiad Gold League</li>
+              USA Computing Olympiad Gold League
+            </li>
           </ul>
         </div>
       </section>
