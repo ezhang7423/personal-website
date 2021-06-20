@@ -30,7 +30,7 @@ canvas {
   .onlymobile {
     display: none;
   }
-  
+
   body.loaded {
     padding-top: 0;
   }
@@ -249,7 +249,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #5baf62 !important;
+  background-color: #2ba24c !important;
 }
 
 .text-primary {
@@ -257,13 +257,13 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-  color: #5baf62;
+  color: #2ba24c;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #5baf62;
+  color: #2ba24c;
 }
 
 .copyright {
