@@ -593,3 +593,9 @@ button.close {
   margin-left: 0;
   padding-left: 0;
 } */
+.no-bullets {
+  padding-inline-start: 10px;
+}
+.no-bullets > li {
+  list-style-type: none;
+}
