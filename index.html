@@ -3,7 +3,7 @@
 
 <head>
   <script>
-    let debug = false;
+    let debug = true;
     if (!debug) {
       function noScroll() {
         window.scrollTo(0, 0)
@@ -11,6 +11,15 @@
       window.addEventListener('scroll', noScroll);
     }
   </script>
+  <script>
+    window.onload = function () {
+      for (let elem of document.getElementsByClassName("currentYear")) {
+        elem.innerHTML = new Date().getFullYear();
+      }
+    }
+
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1,
       shrink-to-fit=no">
@@ -94,7 +103,8 @@
             CA 92129 ·
             <a href="mailto:ete@ucsb.edu">ete [at] ucsb.edu</a>
           </div>
-          <p class="lead mb-5">I build agents.</p>
+          <!-- <p class="lead mb-5">I build agents.</p> -->
+          <p class="lead mb-5">I make websites.</p>
           <div class="sociale-icons">
             <a target="_blank" href="https://www.linkedin.com/in/eddie-zhang-175401196/">
               <span class="important-links iconify" data-icon="fa-brands:linkedin-in" data-inline="false"></span>
@@ -102,9 +112,9 @@
             <a target="_blank" href="https://github.com/ezhang7423">
               <span class="important-links iconify" data-icon="fa-brands:github" data-inline="false"></span>
             </a>
-            <a target="_blank" href="https://ezipe.medium.com">
+            <!-- <a target="_blank" href="https://ezipe.medium.com">
               <span class="important-links iconify" data-icon="fa-brands:medium" data-inline="false"></span>
-            </a>
+            </a> -->
 
             <a target="_blank" href="https://www.youtube.com/channel/UCeP3lZUbPVum0Mskb3JAG0w">
               <span class="important-links iconify" data-icon="fa-brands:youtube" data-inline="false"></span>
@@ -125,13 +135,20 @@
               <h3 class="mb-0">University of California Santa Barbara</h3>
               <div class="subheading mb-3">Bachelor of Science</div>
               <div>Computer Science</div>
-              <p>GPA: 3.98</p>
+              <p>GPA: 3.99</p>
               <p>Regents Scholar (top 2.5% of school)<br> College of
+                Engineering Honors Student<br>
+                coursework: Introduction to Deep Learning, Convex Optimization, Probability and Statistics,
+                Machine Learning,
+                Data Science Analysis
+              </p>
+
+              <!-- <p>Regents Scholar (top 2.5% of school)<br> College of
                 Engineering Honors Student<br>
                 Relevant coursework: Introduction to Deep Learning, Convex Optimization, Probability and Statistics,
                 Machine Learning,
                 Data Science Analysis
-              </p>
+              </p> -->
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">Expected graduation 6/2021</span>
@@ -323,7 +340,7 @@
           <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">Lead Full Stack Engineer</h3>
+              <h3 class="mb-0">Lead Full Stack Engineer/First Hire</h3>
               <div class="subheading mb-3">Allthenticate</div>
               <p>
               <ul>
@@ -484,7 +501,29 @@
 
           </ul>
 
-          <div class="subheading mb-3">Research Guarantees</div>
+          <div class="subheading mb-3">Quality checks</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Mobile-First, Responsive Design
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Browser Testing &amp; Debugging
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              The most performant frontend technologies for every component
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Democratic and fast-moving team player
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- <div class="subheading mb-3">Research Guarantees</div>
           <ul class="no-bullets mb-0">
             <li>
               <span class="iconify" data-icon="akar-icons:check" data-inline="false"></span>
@@ -500,7 +539,7 @@
             </li>
 
           </ul>
-        </div>
+        </div> -->
       </section>
 
       <hr class="m-0">
@@ -594,7 +633,8 @@
               <span class="iconify" data-icon="akar-icons:chevron-up" data-inline="false"></span>
             </a>
           </div>
-          <small>Made by ya boi Eddie Zhang 2019<div style="font-size:.5rem">Feel free to take any of the code</div>
+          <small>Made by ya boi Eddie Zhang <span class="currentYear">xxxx</span>
+            <div style="font-size:.5rem">Feel free to take any of the code</div>
           </small>
         </div>
 

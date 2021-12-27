@@ -83,12 +83,12 @@ function showTab(n) {
   }
 }
 function appear(element) {
-  console.log(element);
+  // console.log(element);
   element.style.display = "block";
 }
 
 function disappear(element) {
-  console.log(element);
+  // console.log(element);
   element.style.display = "none";
 }
 
