@@ -3,7 +3,7 @@
 
 <head>
   <script>
-    let debug = false;
+    let debug = true;
     if (!debug) {
       function noScroll() {
         window.scrollTo(0, 0)
@@ -68,13 +68,13 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#research">Research</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#education">Education</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#research">Research</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience">Employment</a>
@@ -103,8 +103,7 @@
             CA 92129 ·
             <a href="mailto:ete@ucsb.edu">ete [at] ucsb.edu</a>
           </div>
-          <!-- <p class="lead mb-5">I build agents.</p> -->
-          <p class="lead mb-5">I make websites and neural networks.</p>
+          <p class="lead mb-5">I study learning.</p>
           <div class="sociale-icons">
             <a target="_blank" href="https://www.linkedin.com/in/eddie-zhang-175401196/">
               <span class="important-links iconify" data-icon="fa-brands:linkedin-in" data-inline="false"></span>
@@ -123,8 +122,74 @@
         </div>
       </section>
 
-      <hr class="m-0">
 
+      <hr class="m-0">
+      <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="research">
+        <div class="w-100">
+          <h2 class="mb-5">Research</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row
+              justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0"><a style="color: #343a40;" target="_blank" href='/cfpi.pdf'>Offline RL with CFPI</a></h3>
+              <div class="subheading mb-3">Jiachen Li*, <b>Edwin Zhang*</b>, Ming Yin, Qinxun Bai, Yu-Xiang Wang, William Yang Wang</div>
+              <p>
+              <ul>
+                <li>Designed alternative method for solving policy improvement in closed form through Taylor Approximation</li>
+                <li>Utilized Gaussian Mixture Model for modeling heterogenous policies tractably</li>
+                <li>Submitted to NeurIPS 2022</li>
+              </ul>
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Preprint</span>
+            </div>
+          </div>
+
+          <!-- <h3>Projects</h3>
+          <div class="resume-item d-flex flex-column flex-md-row
+              justify-content-between mb-5">
+            <div class="resume-content">
+              <h4 class="mb-0">Biometric authentication with EEG potentials</h4>
+              <div class="subheading mb-3">Yi Ding, Professor Tobias Hollerer</div>
+              <p>
+              <ul>
+                <li>Designed variant of leave one out validation for binary classification on authenticated user</li>
+                <li>Created new data loader class with Pytorch to use with Yi’s existing EEG CNN</li>
+                <li>Wrote up results for publication, submitted to AAAI 2021.</li>
+                <li><a href="https://github.com/ezhang7423/CS192" target="_blank"> Code here</a></li>
+              </ul>
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">March 2020 - June 2020</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row
+              justify-content-between mb-5">
+            <div class="resume-content">
+              <h4 class="mb-0">UCSB Sexuality Research Project</h4>
+              <div class="subheading mb-3"> Professor John Baldwin</div>
+              <p>
+              <ul>
+                <li>Reduced load times by 80% by enabling server and client side caching, increasing monthly viewership
+                  by 30% from 40,000 to 53,000</li>
+                <li>Lead developer for homepage, topics page, search bar, and FAQ page.</li>
+              </ul>
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">October 2019 - September 2021</span>
+            </div>
+          </div>
+ -->
+
+        </div>
+
+      </section>
+
+      <hr class="m-0">
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
         <div class="w-100">
           <h2 class="mb-5">Education</h2>
@@ -132,15 +197,14 @@
           <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">University of California Santa Barbara</h3>
+              <h4 class="mb-0">University of California Santa Barbara</h4>
               <div class="subheading mb-3">Bachelor of Science</div>
               <div>Computer Science</div>
               <p>GPA: 3.99</p>
               <p>Regents Scholar (top 2.5% of school)<br> College of
                 Engineering Honors Student<br>
-                coursework: Introduction to Deep Learning, Convex Optimization, Probability and Statistics,
-                Machine Learning,
-                Data Science Analysis
+                Relevant coursework: Convex Optimization, Advanced Linear Algebra, Differential Geometry,
+                Statistical Machine Learning, Special Topics in Deep Learning
               </p>
 
               <!-- <p>Regents Scholar (top 2.5% of school)<br> College of
@@ -157,7 +221,7 @@
           <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">Palomar Community College</h3>
+              <h4 class="mb-0">Palomar Community College</h4>
               <br>
               <p>GPA: 4.00</p>
               <p>Relevant coursework: Multivariable Calculus and Differential
@@ -170,9 +234,7 @@
         </div>
       </section>
 
-      <hr class="m-0">
-
-      <!-- Portfolio Section -->
+      <hr class="m-0">      
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
 
         <div class="container">
@@ -270,60 +332,13 @@
       </section>
 
       <hr class="m-0">
-      <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="research">
-        <div class="w-100">
-          <h2 class="mb-5">Research Experience</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row
-              justify-content-between mb-5">
-            <div class="resume-content">
-              <h3 class="mb-0">Biometric authentication with EEG potentials</h3>
-              <div class="subheading mb-3">Yi Ding, Professor Tobias Hollerer</div>
-              <p>
-              <ul>
-                <li>Designed variant of leave one out validation for binary classification on authenticated user</li>
-                <li>Created new data loader class with Pytorch to use with Yi’s existing EEG CNN</li>
-                <li>Wrote up results for publication, submitted to AAAI 2021.</li>
-                <li><a href="https://github.com/ezhang7423/CS192" target="_blank"> Code here</a></li>
-              </ul>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">March 2020 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row
-              justify-content-between mb-5">
-            <div class="resume-content">
-              <h3 class="mb-0">UCSB Sexuality Research Project</h3>
-              <div class="subheading mb-3"> Professor John Baldwin</div>
-              <p>
-              <ul>
-                <li>Reduced load times by 80% by enabling server and client side caching, increasing monthly viewership
-                  by 30% from 40,000 to 53,000</li>
-                <li>Lead developer for homepage, topics page, search bar, and FAQ page.</li>
-              </ul>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">October 2019 - Present</span>
-            </div>
-          </div>
-
-
-        </div>
-
-      </section>
-
-      <hr class="m-0">
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
         <div class="w-100">
           <h2 class="mb-5">Employment History</h2>
           <div class="resume-item d-flex flex-column flex-md-row
                           justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">Software Engineering Intern</h3>
+              <h4 class="mb-0">Software Engineering Intern</h4>
               <div class="subheading mb-3">Stealth</div>
               <p>
               <ul>
@@ -340,7 +355,7 @@
           <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">Lead Full Stack Engineer/First Hire</h3>
+              <h4 class="mb-0">Lead Full Stack Engineer/First Hire</h4>
               <div class="subheading mb-3">Allthenticate</div>
               <p>
               <ul>
@@ -365,7 +380,7 @@
           <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">Marketing Associate</h3>
+              <h4 class="mb-0">Marketing Associate</h4>
               <div class="subheading mb-3">ThriveCash</div>
               <p>
               <ul>
@@ -386,7 +401,7 @@
           <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">Founder and Lead Tutor</h3>
+              <h4 class="mb-0">Founder and Lead Tutor</h4>
               <div class="subheading mb-3">Yaitea</div>
               <p>
               <ul>
@@ -420,7 +435,7 @@
           <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
-              <h3 class="mb-0">Math tutor</h3>
+              <h4 class="mb-0">Math tutor</h4>
               <div class="subheading mb-3">Mathnasium</div>
               <p>
               <ul>
