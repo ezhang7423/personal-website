@@ -3,7 +3,7 @@
 
 <head>
   <script>
-    let debug = false;
+    let debug = true;
     if (!debug) {
       function noScroll() {
         window.scrollTo(0, 0)
@@ -134,7 +134,8 @@
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
         <div class="w-100">
           <h2 class="mb-5">About</h2>
-          <p class="lead mb-5">I am a PhD student at Harvard, interested in applying RL for social good.
+          <p class="lead mb-5">I am a PhD student at Harvard, interested in applying RL for social good. I am also a
+            Research Scientist at <a href="https://thefounding.ai" target="_blank">Founding</a>.
             Other
             areas of interest include alignment and the principles of intelligence. I am very fortunate to
             currently be advised by the
@@ -150,7 +151,6 @@
           </div>
         </div>
       </section>
-
 
       <hr class="m-0">
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="research">
@@ -183,6 +183,30 @@
             </div>
           </div>
           <div class="resume-item d-flex flex-column flex-md-row
+                                  justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0"><a style="color: #343a40;" target="_blank" href='https://lcd.eddie.win'>Language Control
+                  Diffusion</a></h3>
+              <div class="subheading mb-3"><b>Edwin Zhang</b>, Yujie Lu, William Yang Wang, Amy Zhang
+              </div>
+              <p>
+              <ul>
+                <li>Proposed and created language conditioned diffusion RL models, enabling generalization in control
+                  through large language
+                  models</li>
+                <li>
+                  Ran several experiments comparing baselines and proposed method on distributed FAIR cluster
+                  through SLURM </li>
+              </ul>
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">ICLR 2024</span>
+              <!-- <span class="text-primary">NeurIPS 2022 Workshop on Language and Reinforcement Learning</span> -->
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row
               justify-content-between mb-5">
             <div class="resume-content">
               <h3 class="mb-0"><a style="color: #343a40;" target="_blank" href='https://cfpi-icml23.github.io'>Offline
@@ -203,28 +227,7 @@
             </div>
           </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row
-                        justify-content-between mb-5">
-            <div class="resume-content">
-              <h3 class="mb-0"><a style="color: #343a40;" target="_blank" href='https://lcd.eddie.win'>Language Control
-                  Diffusion</a></h3>
-              <div class="subheading mb-3"><b>Edwin Zhang</b>, Yujie Lu, William Yang Wang, Amy Zhang
-              </div>
-              <p>
-              <ul>
-                <li>Proposed and created language conditioned diffusion RL models, enabling generalization in control
-                  through large language
-                  models</li>
-                <li>
-                  Ran several experiments comparing baselines and proposed method on distributed FAIR cluster
-                  through SLURM </li>
-              </ul>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">NeurIPS 2022 Workshop on Language and Reinforcement Learning</span>
-            </div>
-          </div>
+
 
 
           <!-- <h3>Projects</h3>
