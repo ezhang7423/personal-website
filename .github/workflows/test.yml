@@ -2,12 +2,9 @@ name: lol
 
 on:
   push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
 
 jobs:
-  build:
+  lmao:
     runs-on: self-hosted
 
     steps:
