@@ -6,4 +6,3 @@ Built with
 - Font Awesome Icons
 - JQuery
 
-## Todo
