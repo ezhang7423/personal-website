@@ -12,10 +12,11 @@ body {
 
 body.loaded {
   opacity: 1;
-  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family: "Noto Serif TC", "Noto Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  color: #868e96;
+  color: #6f7780;
+  letter-spacing: 0.01em;
 }
 
 .tab.t1 {
@@ -57,30 +58,77 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  font-family: "Noto Serif TC", "Noto Serif", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   color: #343a40;
 }
 
 h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
+  font-size: 3.5rem;
+  line-height: 3.3rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 2.25rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 p.lead {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 400;
+  line-height: 1.45;
+}
+
+section.resume-section p,
+section.resume-section li,
+section.resume-section .body-copy {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #6f7780;
+}
+
+/* Keep key section body copy visually identical. */
+#intro p.lead,
+#about p.lead,
+#research li {
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #6f7780;
+}
+
+#talks .talks-body,
+#talks .talks-body li,
+#talks .talks-body a {
+  font-family: "Noto Serif TC", "Noto Serif", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+  font-weight: 400 !important;
+  color: #6f7780 !important;
+}
+
+#talks .talks-body a {
+  text-decoration: underline;
 }
 
 p.project-text {
@@ -105,33 +153,61 @@ p.project-text {
 
 .no-styling {
   text-decoration: none;
-  color: #868e96;
+  color: #6f7780;
 }
 
 .no-styling:focus {
   text-decoration: none;
-  color: #868e96;
+  color: #6f7780;
 }
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  font-family: "Noto Serif TC", "Noto Serif", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+}
+
+#research .subheading {
+  text-transform: none;
+  margin-top: 0.3rem;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* Tighten hero spacing after switching to serif fonts. */
+#intro h1 {
+  font-size: 4.25rem;
+  line-height: 4rem;
+  margin-bottom: 1rem !important;
+}
+
+#intro .subheading {
+  margin-bottom: 3rem !important;
+  line-height: 1.2;
+  margin-left: .33rem;
+}
+
+
+#intro p.lead {
+  margin-bottom: 1.5rem !important;
+  line-height: 1.45;
+  margin-left: .33rem;
+
 }
 
 .sociale-icons a {
   display: inline-block;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 2.8rem;
+  width: 2.8rem;
   background-color: #495057;
   color: #fff !important;
   border-radius: 100%;
   text-align: center;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  margin-right: 1rem;
+  font-size: 1.15rem;
+  line-height: 2.8rem;
+  margin-right: 0.8rem;
 }
 
 .sociale-icons a:last-child {
@@ -139,7 +215,7 @@ p.project-text {
 }
 
 .sociale-icons a:hover {
-  background-color: #6ed476;
+  background-color: #7ee08a;
 }
 
 .dev-icons {
@@ -147,17 +223,35 @@ p.project-text {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #6ed476;
+  color: #7ee08a;
 }
 
 .dev-icons .list-inline-item svg:hover {
-  color: #6ed476;
+  color: #7ee08a;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover,
+#sideNav .navbar-nav .nav-item .nav-link:focus {
+  color: #ecfff0;
+  background-color: transparent;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:active {
+  color: #ffffff;
+  background-color: transparent;
+  transform: translateY(1px);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: #ffffff;
+  background-color: transparent;
 }
 
 #sideNav .navbar-toggler:focus {
@@ -253,7 +347,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #2ba24c !important;
+  background-color: #248f43 !important;
 }
 
 .text-primary {
@@ -261,13 +355,13 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-  color: #2ba24c;
+  color: #248f43;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #2ba24c;
+  color: #37b85c;
 }
 
 .copyright {
